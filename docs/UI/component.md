@@ -1,8 +1,9 @@
 #  组件
 
 ## button组件
-
-<button-doc/>
+<ClientOnly>
+  <button-doc/>
+</ClientOnly>
 
 
 ```
