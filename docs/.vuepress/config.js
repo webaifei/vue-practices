@@ -2,7 +2,7 @@
 module.exports = {
     title: "vue项目技术文档",
     description: "做一只不平凡的牛🐂",
-    base: "/xiaoniu-site/",
+    base: "/vue-practices/",
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },

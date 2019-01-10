@@ -7,7 +7,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "theme": "vuepress eject"
+    "release": "./scripts/release.sh"
   },
   "devDependencies": {
     "node-sass": "^4.11.0",
