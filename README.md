@@ -12,3 +12,9 @@ yarn run docs:dev
 ```
 yarn run docs:build
 ```
+
+### 发布
+```
+yarn run release
+
+```
