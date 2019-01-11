@@ -22,7 +22,7 @@ module.exports = {
             },
             {
                 title: '其他',
-                children: ['/others/log', '/others/webp']
+                children: ['/others/log', '/others/webp', '/others/network', '/others/router']
             }
         ],
         lastUpdated: 'Last Updated',

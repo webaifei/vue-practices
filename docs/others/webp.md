@@ -7,6 +7,15 @@
 :::
 
 ## webp 格式特点
+优点
+1. 更小的文件尺寸;
+2. 更高的质量——与其他相同大小不同格式的压缩图像比较。
+
+缺点
+1. 根据Google的测试，目前WebP与JPG相比较，编码速度慢10倍，解码速度慢1.5倍。
+2. 兼容性
+
+> web中使用webp对于解码慢的缺点基本上可以忽略；兼容性问题无法绕过，但是能给我们很大部分用户提供更好的体验，就值得我们去做这件事。
 
 ## vue项目中使用
 结合[vue-webp-plugin](https://www.npmjs.com/package/vue-webp-plugin) 和 [new-webp-webpack-plugin](https://www.npmjs.com/package/new-webp-webpack-plugin)
