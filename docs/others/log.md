@@ -53,4 +53,5 @@ options.content.retention.rsd = Object.assign(
 :::
 
 
-
+## 模块曝光埋点解决方案
+模块曝光埋点使用[vue-intersection-plugin](https://webaifei.github.io/vue-intersection-plugin/)
