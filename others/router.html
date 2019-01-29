@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>过场动画 | vue项目技术文档</title>
+    <meta name="description" content="做一只不平凡的牛🐂">
+    
+    
+    <link rel="preload" href="/vue-practices/assets/css/0.styles.48aef4ff.css" as="style"><link rel="preload" href="/vue-practices/assets/js/app.cfc59559.js" as="script"><link rel="preload" href="/vue-practices/assets/js/21.87c9db68.js" as="script"><link rel="prefetch" href="/vue-practices/assets/js/10.e5d519af.js"><link rel="prefetch" href="/vue-practices/assets/js/11.a42f938d.js"><link rel="prefetch" href="/vue-practices/assets/js/12.d413cb85.js"><link rel="prefetch" href="/vue-practices/assets/js/13.f573220c.js"><link rel="prefetch" href="/vue-practices/assets/js/14.47eefa13.js"><link rel="prefetch" href="/vue-practices/assets/js/15.16b620e1.js"><link rel="prefetch" href="/vue-practices/assets/js/16.d9249985.js"><link rel="prefetch" href="/vue-practices/assets/js/17.31fbd17f.js"><link rel="prefetch" href="/vue-practices/assets/js/18.2ef2b7a6.js"><link rel="prefetch" href="/vue-practices/assets/js/19.b089c466.js"><link rel="prefetch" href="/vue-practices/assets/js/2.d955fe62.js"><link rel="prefetch" href="/vue-practices/assets/js/20.ee262e4c.js"><link rel="prefetch" href="/vue-practices/assets/js/22.27c0b1c5.js"><link rel="prefetch" href="/vue-practices/assets/js/23.0a7280c4.js"><link rel="prefetch" href="/vue-practices/assets/js/24.45301280.js"><link rel="prefetch" href="/vue-practices/assets/js/3.b5c5e04c.js"><link rel="prefetch" href="/vue-practices/assets/js/4.397961ad.js"><link rel="prefetch" href="/vue-practices/assets/js/5.3efad7f7.js"><link rel="prefetch" href="/vue-practices/assets/js/6.f3244191.js"><link rel="prefetch" href="/vue-practices/assets/js/7.d6e43605.js"><link rel="prefetch" href="/vue-practices/assets/js/8.83149e9b.js"><link rel="prefetch" href="/vue-practices/assets/js/9.149158c9.js">
+    <link rel="stylesheet" href="/vue-practices/assets/css/0.styles.48aef4ff.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-practices/" class="home-link router-link-active"><!----> <span class="site-name">vue项目技术文档</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://github.com/webaifei/vue-practices" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://github.com/webaifei/vue-practices" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>主页</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>UI</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>其他</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/vue-practices/others/log.html" class="sidebar-link">埋点</a></li><li><a href="/vue-practices/others/webp.html" class="sidebar-link">webp 图片格式</a></li><li><a href="/vue-practices/others/network.html" class="sidebar-link">接口请求</a></li><li><a href="/vue-practices/others/router.html" class="active sidebar-link">过场动画</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vue-practices/others/prerender.html" class="sidebar-link">预渲染</a></li><li><a href="/vue-practices/others/cross-domain.html" class="sidebar-link">跨域</a></li><li><a href="/vue-practices/others/pwa.html" class="sidebar-link">PWA</a></li><li><a href="/vue-practices/others/code-style.html" class="sidebar-link">代码规范</a></li></ul></div></li></ul> </div> <div class="mypage"> <div class="content"><h1 id="过场动画"><a href="#过场动画" aria-hidden="true" class="header-anchor">#</a> 过场动画</h1> <h3 id="设置过渡效果"><a href="#设置过渡效果" aria-hidden="true" class="header-anchor">#</a> 设置过渡效果</h3> <p>我们可以用transition组件给它添加一些过渡效果</p> <div class="language- extra-class"><pre class="language-text"><code>使用动态的 transition name
+&lt;transition :name=&quot;transitionName&quot;&gt;
+    &lt;keep-alive max=&quot;2&quot;&gt;
+        &lt;router-view&gt;&lt;/router-view&gt;
+    &lt;/keep-alive&gt;
+&lt;/transition&gt;
+</code></pre></div><h3 id="监控路由跳转-动态设置过渡效果"><a href="#监控路由跳转-动态设置过渡效果" aria-hidden="true" class="header-anchor">#</a> 监控路由跳转,动态设置过渡效果</h3> <div class="language- extra-class"><pre class="language-text"><code>&quot;$route&quot; (to, from) {
+    // 前进
+    this.transitionName = &quot;slide-right&quot;;
+    // 后退
+    this.transitionName = &quot;slide-left&quot;;    
+}
+</code></pre></div><h4 id="_1-如何判断前进还是后退"><a href="#_1-如何判断前进还是后退" aria-hidden="true" class="header-anchor">#</a> 1.如何判断前进还是后退</h4> <p>基于当前路由与目标路由的变化关系来决定使用哪种过渡 我们采用方案为 跳转时为页面添加时间戳参数</p> <div class="language- extra-class"><pre class="language-text"><code>需要在每个页面点击跳转时添加ctime参数
+this.$router.push({
+    path:'/',
+    query:{
+        etime:Date.now()
+    }
+})
+
+判断切换页面时间戳参数之间的大小关系,如果要跳转页面的时间戳大于当前页面的时间戳做前进动画slide-right,
+否则则做后退动画slide-left
+&quot;$route&quot; (to, from) {
+    if(to.query.ctime &amp;&amp; from.query.ctime &amp;&amp; to.query.ctime &lt; from.query.ctime) {
+        this.transitionName = &quot;slide-left&quot;;
+    } else if(!to.query.ctime &amp;&amp; from.query.ctime) {
+        this.transitionName = &quot;slide-left&quot;;
+    } else {
+        this.transitionName = &quot;slide-right&quot;;
+    }
+}
+</code></pre></div><div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>我们需要在每次跳转时添加当前时间戳参数 为了方便开发、避免代码冗余,我们对vueRouter push方法进行重写,实现跳转则添加etime参数 值为当前时间的时间戳</p></div> <p>重写vueRouter push方法 实现点击则添加etime参数 值为当前时间的时间戳</p> <div class="language- extra-class"><pre class="language-text"><code>vueRouter.prototype._push = vueRouter.prototype.push;
+vueRouter.prototype.push = function push (location, onComplete, onAbort) {
+    let locationObj = {
+        query: {}
+    };
+    if(typeof location === &quot;string&quot;) {
+        locationObj.path = location;
+    } else if(isObject(location)) {
+        locationObj = {...locationObj,...location};
+    }
+    locationObj.query.ctime = Date.now();
+    this._push(locationObj, onComplete, onAbort);
+};
+</code></pre></div><h4 id="_2-每次切换时向左向右切换动画如何实现"><a href="#_2-每次切换时向左向右切换动画如何实现" aria-hidden="true" class="header-anchor">#</a> 2.每次切换时向左向右切换动画如何实现</h4> <p>slide-right:当前页面向屏幕左边移动消失的同时,下一个页面从屏幕的右边向左边移动出现</p> <div class="language- extra-class"><pre class="language-text"><code>.slide-right-enter-active {
+    animation-name: slide-enter;
+    animation-duration: .3s;
+    animation-timing-function: ease;
+    z-index: 2;
+}
+
+.slide-right-leave-active {
+    animation-name: slide-leave;
+    animation-duration: .3s;
+    animation-timing-function: ease;
+    z-index: 0;
+}
+</code></pre></div><p>slide-left:当前页面向屏幕右边移动消失的同时,下一个页面从屏幕的左边向右边移动出现</p> <div class="language- extra-class"><pre class="language-text"><code>.slide-left-enter-active {
+    animation-name: slide-back-enter;
+    animation-duration: .3s;
+    animation-timing-function: ease;
+    z-index: 0;
+}
+
+.slide-left-leave-active {
+    animation-name: slide-back-leave;
+    animation-duration: .3s;
+    animation-timing-function: ease-out;
+    z-index: 2;
+}
+</code></pre></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">1/11/2019, 4:27:58 PM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/vue-practices/others/network.html" class="prev">
+          接口请求
+        </a></span> <span class="next"><a href="/vue-practices/others/prerender.html">
+          预渲染
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/vue-practices/assets/js/app.cfc59559.js" defer></script><script src="/vue-practices/assets/js/21.87c9db68.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>跨域 | vue项目技术文档</title>
+    <meta name="description" content="做一只不平凡的牛🐂">
+    
+    
+    <link rel="preload" href="/vue-practices/assets/css/0.styles.48aef4ff.css" as="style"><link rel="preload" href="/vue-practices/assets/js/app.cfc59559.js" as="script"><link rel="preload" href="/vue-practices/assets/js/16.d9249985.js" as="script"><link rel="prefetch" href="/vue-practices/assets/js/10.e5d519af.js"><link rel="prefetch" href="/vue-practices/assets/js/11.a42f938d.js"><link rel="prefetch" href="/vue-practices/assets/js/12.d413cb85.js"><link rel="prefetch" href="/vue-practices/assets/js/13.f573220c.js"><link rel="prefetch" href="/vue-practices/assets/js/14.47eefa13.js"><link rel="prefetch" href="/vue-practices/assets/js/15.16b620e1.js"><link rel="prefetch" href="/vue-practices/assets/js/17.31fbd17f.js"><link rel="prefetch" href="/vue-practices/assets/js/18.2ef2b7a6.js"><link rel="prefetch" href="/vue-practices/assets/js/19.b089c466.js"><link rel="prefetch" href="/vue-practices/assets/js/2.d955fe62.js"><link rel="prefetch" href="/vue-practices/assets/js/20.ee262e4c.js"><link rel="prefetch" href="/vue-practices/assets/js/21.87c9db68.js"><link rel="prefetch" href="/vue-practices/assets/js/22.27c0b1c5.js"><link rel="prefetch" href="/vue-practices/assets/js/23.0a7280c4.js"><link rel="prefetch" href="/vue-practices/assets/js/24.45301280.js"><link rel="prefetch" href="/vue-practices/assets/js/3.b5c5e04c.js"><link rel="prefetch" href="/vue-practices/assets/js/4.397961ad.js"><link rel="prefetch" href="/vue-practices/assets/js/5.3efad7f7.js"><link rel="prefetch" href="/vue-practices/assets/js/6.f3244191.js"><link rel="prefetch" href="/vue-practices/assets/js/7.d6e43605.js"><link rel="prefetch" href="/vue-practices/assets/js/8.83149e9b.js"><link rel="prefetch" href="/vue-practices/assets/js/9.149158c9.js">
+    <link rel="stylesheet" href="/vue-practices/assets/css/0.styles.48aef4ff.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-practices/" class="home-link router-link-active"><!----> <span class="site-name">vue项目技术文档</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://github.com/webaifei/vue-practices" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://github.com/webaifei/vue-practices" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>主页</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>UI</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>其他</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/vue-practices/others/log.html" class="sidebar-link">埋点</a></li><li><a href="/vue-practices/others/webp.html" class="sidebar-link">webp 图片格式</a></li><li><a href="/vue-practices/others/network.html" class="sidebar-link">接口请求</a></li><li><a href="/vue-practices/others/router.html" class="sidebar-link">过场动画</a></li><li><a href="/vue-practices/others/prerender.html" class="sidebar-link">预渲染</a></li><li><a href="/vue-practices/others/cross-domain.html" class="active sidebar-link">跨域</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue-practices/others/cross-domain.html#_1-什么是跨域" class="sidebar-link">1.什么是跨域</a></li><li class="sidebar-sub-header"><a href="/vue-practices/others/cross-domain.html#_2-跨域的解决方案" class="sidebar-link">2.跨域的解决方案</a></li></ul></li><li><a href="/vue-practices/others/pwa.html" class="sidebar-link">PWA</a></li><li><a href="/vue-practices/others/code-style.html" class="sidebar-link">代码规范</a></li></ul></div></li></ul> </div> <div class="mypage"> <div class="content"><h1 id="跨域"><a href="#跨域" aria-hidden="true" class="header-anchor">#</a> 跨域</h1> <h4 id="demo地址-https-github-com-yuhang1992-crossdomain-git"><a href="#demo地址-https-github-com-yuhang1992-crossdomain-git" aria-hidden="true" class="header-anchor">#</a> demo地址 <a href="https://github.com/yuhang1992/crossDomain.git" target="_blank" rel="noopener noreferrer">https://github.com/yuhang1992/crossDomain.git<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h4> <h2 id="_1-什么是跨域"><a href="#_1-什么是跨域" aria-hidden="true" class="header-anchor">#</a> 1.什么是跨域</h2> <p>同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。同源指：协议、域名、端口号必须一致。这个就是同源策略的保护,如果浏览器对javascript没有同源策略的保护,那么一些重要的机密网站将会很危险</p> <p>下表给出了相对http://a.example.com:80同源检测的结果:</p> <table><thead><tr><th>url</th> <th style="text-align:center">结果</th> <th style="text-align:right">原因</th></tr></thead> <tbody><tr><td>http://a.example.com:80/index</td> <td style="text-align:center">同源</td> <td style="text-align:right"></td></tr> <tr><td>https://a.example.com:80/index</td> <td style="text-align:center">跨源</td> <td style="text-align:right">协议不同</td></tr> <tr><td>http://b.example.com:80/index</td> <td style="text-align:center">跨源</td> <td style="text-align:right">域名不同</td></tr> <tr><td>http://a.example.com:81/index</td> <td style="text-align:center">跨源</td> <td style="text-align:right">端口不同</td></tr></tbody></table> <p>那跨源有什么后果呢？归纳有三：不能获取 Cookie、LocalStorage；不能获取 dom 节点；不能进行一般的 Ajax 通信；跨域解决方案的出现就是为了解决以上痛处。</p> <h2 id="_2-跨域的解决方案"><a href="#_2-跨域的解决方案" aria-hidden="true" class="header-anchor">#</a> 2.跨域的解决方案</h2> <h3 id="jsonp"><a href="#jsonp" aria-hidden="true" class="header-anchor">#</a> jsonp</h3> <p>JSONP是服务器与客户端跨源通信的常用方法。最大特点就是简单适用，老式浏览器全部支持，服务器改造非常小。</p> <p>它的基本思想是，网页通过添加一个script元素，向服务器请求JSON数据，这种做法不受同源政策限制；服务器收到请求后，将数据放在一个指定名字的回调函数里传回来。</p> <p>首先，网页动态插入script元素，由它向跨源网址发出请求。</p> <div class="language- extra-class"><pre class="language-text"><code>function addScriptTag(src) {
+  var script = document.createElement('script');
+  script.setAttribute(&quot;type&quot;,&quot;text/javascript&quot;);
+  script.src = src;
+  document.body.appendChild(script);
+}
+
+window.onload = function () {
+  addScriptTag('http://localhost:3001?callback=myFunction');
+}
+
+function myFunction (data) {
+    alert('获取数据成功，2s后改变数据！')
+    let p = document.getElementsByTagName('p')[0]
+    setTimeout(function () {
+        p.innerHTML = data.message
+    }, 2000)
+    // 2s后p标签内的内容将改变
+}
+
+</code></pre></div><p>上面代码通过动态添加script元素，向服务器localhost:3001发出请求。注意，该请求的查询字符串有一个callback参数，用来指定回调函数的名字，这对于JSONP是必需的。</p> <p>服务器收到这个请求以后，会将数据放在回调函数的参数位置返回。</p> <div class="language- extra-class"><pre class="language-text"><code>{'message': 'hello world from JSONP!'}
+</code></pre></div><p>由于script元素请求的脚本，直接作为代码运行。这时，只要浏览器定义了myFunction函数，该函数就会立即调用。作为参数的JSON数据被视为JavaScript对象，而不是字符串，因此避免了使用JSON.parse的步骤。</p> <div class="warning custom-block"><p class="custom-block-title">WARNING</p> <p>jsonp有明显的几点硬伤
+返回json变成返回js了，所以服务器是要改动支持的，不是调用方一厢情愿说用就能用的。只支持get请求，不支持post、put、delete等；不安全，容易受xss攻击。</p></div> <h3 id="cors"><a href="#cors" aria-hidden="true" class="header-anchor">#</a> CORS</h3> <h4 id="简介"><a href="#简介" aria-hidden="true" class="header-anchor">#</a> 简介</h4> <p><a href="http://www.ruanyifeng.com/blog/2016/04/cors.html" target="_blank" rel="noopener noreferrer">CORS<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>是一个W3C标准，全称是&quot;跨域资源共享&quot;（Cross-origin resource sharing）。
+它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。需要浏览器和服务器同时支持。目前，所有浏览器都支持该功能，IE浏览器不能低于IE10。</p> <p>整个CORS通信过程，都是浏览器自动完成，不需要用户参与。对于开发者来说，CORS通信与同源的AJAX通信没有差别，代码完全一样。浏览器一旦发现AJAX请求跨源，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。</p> <p>因此，实现CORS通信的关键是服务器。只要服务器实现了CORS接口，就可以跨源通信。</p> <p>需要在服务端设置字段 Access-Control-Allow-Origin，它的作用就是设置允许来自什么源的请求，如果值设置为 *，表明允许来自任意源的请求。</p> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>如何利用 CORS 实现 Cookie 的跨域传送?
+首先在服务器随意设置个 Cookie 值下发到浏览器，如果非跨域的情况下，浏览器再次请求服务器时就会带上服务器给的 Cookie，但是跨域的时候需在服务端设置 Access-Control-Allow-Credentials 字段以及在客户端设置 withCredentials 字段，两者缺一不可，代码如下：</p></div> <div class="language- extra-class"><pre class="language-text"><code>
+服务端代码
+const server = http.createServer((req, res) =&gt; {
+  res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:3001') // 必填：接受域的请求
+  res.setHeader('Set-Cookie', ['type=muyy']) // 下发 cookie
+  res.setHeader('Access-Control-Allow-Credentials', true) // ② 选填：是否允许浏览器传 cookie 到服务端，只能设置为 true
+  res.end('date from cors')
+})
+
+前端代码
+config.withCredentials = true // 传 cookie 的时候前端要做的
+</code></pre></div><div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>需要注意的是，如果要发送Cookie，Access-Control-Allow-Origin就不能设为星号，必须指定明确的、与请求网页一致的域名</p></div> <div class="warning custom-block"><p class="custom-block-title">WARNING</p> <p>优点是支持所有类型的 HTTP 方法，
+缺点是有些老的浏览器不支持 CORS</p></div> <h3 id="nginx"><a href="#nginx" aria-hidden="true" class="header-anchor">#</a> Nginx</h3> <p><a href="https://www.nginx.com/resources/wiki/" target="_blank" rel="noopener noreferrer">Nginx (engine x)<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器。</p> <p>Nginx配置：</p> <div class="language- extra-class"><pre class="language-text"><code>server{
+    # 监听9099端口
+    listen 9099;
+    # 域名是localhost
+    server_name localhost;
+    #凡是localhost:9099/api这个样子的，都转发到真正的服务端地址http://localhost:9871
+    location ^~ /api {
+    proxy_pass http://localhost:9871;
+    }
+}
+</code></pre></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">1/29/2019, 10:17:14 AM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/vue-practices/others/prerender.html" class="prev">
+          预渲染
+        </a></span> <span class="next"><a href="/vue-practices/others/pwa.html">
+          PWA
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/vue-practices/assets/js/app.cfc59559.js" defer></script><script src="/vue-practices/assets/js/16.d9249985.js" defer></script>
+  </body>
+</html>
